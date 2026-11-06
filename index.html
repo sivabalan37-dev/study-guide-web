@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SB Study Guide</title>
+<style>
+:root{--paper:#f4f8fc;--rule:#d5e0f0;--margin:#d64541;--ink:#16213e;--pencil:#5b6475;--hi:#ffe14d;--ok:#1d7a46;--no:#c0392b}
+@media(prefers-color-scheme:dark){:root{--paper:#1d2a26;--rule:#2b3c36;--margin:#e57373;--ink:#eef2e6;--pencil:#a3b3ab;--hi:#e9c93f;--ok:#7fdc9f;--no:#ff8f85}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font:17px/28px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button{font-family:inherit;font-size:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid var(--hi);outline-offset:2px}
+.mg{position:fixed;left:28px;top:0;bottom:0;width:2px;background:var(--margin);opacity:.6;pointer-events:none}
+header{padding:28px 16px 0 40px}
+h1{margin:0;font:700 28px/56px Georgia,"Times New Roman",serif}
+header p{margin:0;color:var(--pencil);font-size:15px}
+main{padding:28px 16px 56px 40px;max-width:680px}
+main.ruled{background:repeating-linear-gradient(transparent 0 27px,var(--rule) 27px 28px)}
+h2{margin:0;font:700 24px/56px Georgia,serif}
+p{margin:0 0 28px}
+.lvs{display:flex;flex-wrap:wrap;margin:0 0 28px}
+.lv{background:none;border:0;padding:0 2px;margin:0 14px 0 0;color:var(--ink);font-weight:600;line-height:28px}
+.lv.on{background:linear-gradient(transparent 50%,var(--hi) 50%);color:var(--ink)}
+@media(prefers-color-scheme:dark){.lv.on{color:#1d2a26}}
+.bk{background:none;border:0;padding:0;color:var(--pencil);line-height:28px;height:28px;font-size:15px}
+.btn{background:var(--ink);color:var(--paper);border:2px solid var(--ink);border-radius:4px;padding:0 20px;min-height:56px;font-weight:600;margin:0 0 28px}
+.btn.alt{background:none;color:var(--ink);min-height:48px;margin:0;padding:0 14px}
+.row{display:block;cursor:pointer}
+.row b{display:block;font:700 19px/28px Georgia,serif}
+.row small{display:block;font-size:14px;line-height:28px;color:var(--pencil)}
+.sc{float:right;font-size:15px;line-height:28px;color:var(--pencil)}
+.nt{list-style:none;margin:0;padding:0;font:18px/28px Georgia,serif}
+.nt li{position:relative;padding-left:20px;margin:0 0 28px}
+.nt li:before{content:"–";position:absolute;left:0;color:var(--margin);font-weight:700}
+.fc{border:2px solid var(--ink);border-top:8px solid var(--margin);background:var(--paper);padding:28px 16px;min-height:224px;font:700 20px/28px Georgia,serif;cursor:pointer}
+.fc small{display:block;font:400 14px/28px system-ui,sans-serif;color:var(--pencil);margin-bottom:14px}
+.nav{display:flex;align-items:center;justify-content:space-between;margin-top:28px}
+.nav span{color:var(--pencil)}
+.qn{color:var(--pencil);font-size:14px;margin:0}
+.q{font:700 20px/28px Georgia,serif;margin:0 0 28px}
+.opt{display:flex;gap:14px;align-items:center;width:100%;min-height:56px;padding:0;margin:0;background:none;border:0;color:var(--ink);text-align:left;line-height:24px}
+.b{flex:none;width:30px;height:30px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:600;line-height:1}
+.opt.ok .b{background:var(--ok);border-color:var(--ok);color:var(--paper)}
+.opt.no .b{background:var(--no);border-color:var(--no);color:var(--paper)}
+.opt.ok{font-weight:700}
+.ex{margin:28px 0;padding-left:12px;border-left:4px solid var(--hi);font-family:Georgia,serif}
+.big{font:700 44px/56px Georgia,serif;margin:0}
+</style>
+</head>
+<body>
+<div class="mg"></div>
+<header><h1>SB Study Guide</h1><p>Class 10, 11, 12, NEET and JEE. Works offline.</p></header>
+<main id="app"></main>
+<script>
+var T=[
+{t:"Electricity",s:"Physics",l:["10"],
+n:["Ohm's law: V = IR at constant temperature. The unit of resistance is the ohm (Ω).","Series: R = R1 + R2 + …, same current everywhere. Parallel: 1/R = 1/R1 + 1/R2 + …, same voltage across each.","Resistance R = ρL/A. Resistivity ρ depends on the material, not on length or thickness.","Power P = VI = I²R = V²/R. Heat produced H = I²Rt (Joule's law). 1 kWh = 3.6 × 10⁶ J."],
+c:[["SI unit of electric current?","Ampere (A), one coulomb per second."],["Why are home appliances connected in parallel?","Each gets the full supply voltage and works independently."],["Equivalent resistance of R1 and R2 in parallel?","R1R2 / (R1 + R2)"]],
+m:[["Two 4 Ω resistors are connected in parallel. The equivalent resistance is",["2 Ω","4 Ω","8 Ω","16 Ω"],0,"R = (4 × 4) / (4 + 4) = 2 Ω."],["A 100 W bulb glows for 10 hours. Energy used is",["0.1 kWh","1 kWh","10 kWh","100 kWh"],1,"100 W = 0.1 kW, and 0.1 kW × 10 h = 1 kWh."]]},
+{t:"Acids, Bases and Salts",s:"Chemistry",l:["10"],
+n:["pH below 7 is acidic, 7 is neutral and above 7 is basic. pH = −log[H⁺], so each unit is a tenfold change in H⁺ concentration.","Acid + base → salt + water (neutralisation). Acid + metal → salt + hydrogen gas.","Baking soda NaHCO₃. Washing soda Na₂CO₃·10H₂O. Bleaching powder CaOCl₂. Plaster of Paris CaSO₄·½H₂O.","Antacids such as milk of magnesia neutralise excess stomach acid (HCl)."],
+c:[["Chemical name of baking soda?","Sodium hydrogencarbonate, NaHCO₃."],["pH of pure water at 25 °C?","7, neutral."],["Which gas turns lime water milky?","Carbon dioxide, CO₂."]],
+m:[["Which pH value is the most acidic?",["2","5","7","9"],0,"The lower the pH, the stronger the acid."],["Plaster of Paris is",["CaSO₄·2H₂O","CaSO₄·½H₂O","CaCO₃","CaOCl₂"],1,"Gypsum is CaSO₄·2H₂O. Heating it gives plaster of Paris, CaSO₄·½H₂O."]]},
+{t:"Motion and Newton's Laws",s:"Physics",l:["11","NEET","JEE"],
+n:["Constant acceleration: v = u + at, s = ut + ½at², v² = u² + 2as.","Newton's laws: 1st is inertia, 2nd is F = ma (more generally F = dp/dt), 3rd is action and reaction, equal and opposite on different bodies.","Projectile: range R = u² sin 2θ / g, time of flight T = 2u sin θ / g, maximum range at 45°.","Friction: f ≤ μN. Kinetic friction f = μₖN."],
+c:[["SI unit of force?","Newton (N) = kg·m/s²."],["Momentum formula and unit?","p = mv, in kg·m/s."],["Launch angle for maximum range on level ground?","45°."]],
+m:[["A body starts from rest with acceleration 2 m/s². Distance covered in 5 s is",["10 m","25 m","50 m","5 m"],1,"s = ½at² = ½ × 2 × 25 = 25 m."],["A net force of 20 N acts on a 5 kg mass. Its acceleration is",["0.25 m/s²","4 m/s²","25 m/s²","100 m/s²"],1,"a = F/m = 20 / 5 = 4 m/s²."]]},
+{t:"Mole Concept",s:"Chemistry",l:["11","NEET","JEE"],
+n:["1 mole = 6.022 × 10²³ particles (Avogadro's number).","Moles = mass ÷ molar mass = number of particles ÷ Avogadro's number.","NCERT uses 22.4 L as the volume of 1 mole of an ideal gas at 0 °C and 1 atm.","Molarity = moles of solute per litre of solution. Molality = moles of solute per kg of solvent."],
+c:[["Value of Avogadro's number?","6.022 × 10²³ per mole."],["Molar mass of water?","18 g/mol."],["Formula for molarity?","Moles of solute ÷ litres of solution."]],
+m:[["Number of moles in 36 g of water (molar mass 18 g/mol)",["1","2","3","0.5"],1,"36 / 18 = 2 mol."],["Number of molecules in 0.5 mol of a gas",["3.011 × 10²³","6.022 × 10²³","1.2 × 10²⁴","3 × 10²²"],0,"0.5 × 6.022 × 10²³ = 3.011 × 10²³."]]},
+{t:"Cell Biology",s:"Biology",l:["11","NEET"],
+n:["Cell theory: Schleiden and Schwann said all organisms are made of cells. Virchow added that new cells arise from existing cells.","Mitochondria make ATP and have their own DNA. Ribosomes make proteins.","Golgi apparatus modifies, packages and secretes proteins. Lysosomes hold digestive enzymes.","Prokaryotes have no membrane-bound nucleus. Eukaryotes do."],
+c:[["Who first observed cells, and when?","Robert Hooke, in 1665."],["Site of photosynthesis in a plant cell?","Chloroplast."],["Which organelles are called suicide bags?","Lysosomes."]],
+m:[["Which organelle is the main site of ATP production?",["Golgi apparatus","Mitochondrion","Ribosome","Lysosome"],1,"Mitochondria make most of the cell's ATP."],["Which of these has no membrane-bound nucleus?",["Amoeba","Yeast","Bacteria","Paramecium"],2,"Bacteria are prokaryotes."]]},
+{t:"Electrostatics",s:"Physics",l:["12","NEET","JEE"],
+n:["Coulomb's law: F = kq₁q₂ / r², with k = 1/(4πε₀) ≈ 9 × 10⁹ N·m²/C².","Electric field E = F/q. For a point charge E = kq/r². Field lines start on positive charges and end on negative charges.","Gauss's law: flux through a closed surface = enclosed charge / ε₀.","Potential V = kq/r. Capacitance C = Q/V and stored energy U = ½CV²."],
+c:[["SI unit of capacitance?","Farad (F)."],["Energy stored in a capacitor?","U = ½CV²"],["Gauss's law in words?","Total flux through a closed surface = enclosed charge ÷ ε₀."]],
+m:[["The distance between two point charges is doubled. The force between them becomes",["half","one-fourth","double","four times"],1,"F is proportional to 1/r², so it becomes one-fourth."],["The electric field inside a charged conductor in electrostatic equilibrium is",["zero","kq/r²","maximum","infinite"],0,"Free charges rearrange until the net field inside is zero."]]},
+{t:"Genetics",s:"Biology",l:["12","NEET"],
+n:["Mendel's laws: dominance, segregation and independent assortment.","Monohybrid F₂: phenotype 3 : 1, genotype 1 : 2 : 1. Dihybrid F₂ phenotype 9 : 3 : 3 : 1.","Test cross: cross with the homozygous recessive to find an unknown genotype.","Central dogma: DNA → RNA → protein. A codon has 3 nucleotides."],
+c:[["Who is the father of genetics?","Gregor Mendel."],["How many codons are there?","64: 61 code for amino acids and 3 are stop codons."],["Which codon is the start codon?","AUG, which codes for methionine."]],
+m:[["The F₂ phenotypic ratio of a dihybrid cross is",["3 : 1","1 : 2 : 1","9 : 3 : 3 : 1","1 : 1 : 1 : 1"],2,"Two independent traits give 9 : 3 : 3 : 1."],["A test cross is made with",["a homozygous dominant plant","a homozygous recessive plant","a heterozygous plant","any F₁ plant"],1,"Crossing with the homozygous recessive reveals the unknown genotype from the offspring."]]},
+{t:"Calculus Basics",s:"Maths",l:["12","JEE"],
+n:["d/dx xⁿ = nxⁿ⁻¹. Also sin x → cos x, cos x → −sin x, eˣ → eˣ, ln x → 1/x.","Product rule: (uv)′ = u′v + uv′. Chain rule: dy/dx = (dy/du)(du/dx).","∫xⁿ dx = xⁿ⁺¹/(n+1) + C for n ≠ −1. ∫dx/x = ln|x| + C. ∫eˣ dx = eˣ + C.","Maxima and minima: set f′(x) = 0, then f″ negative gives a maximum and f″ positive gives a minimum."],
+c:[["d/dx (tan x)","sec²x"],["∫ cos x dx","sin x + C"],["Quotient rule","(u/v)′ = (u′v − uv′) / v²"]],
+m:[["The derivative of x³ at x = 2 is",["6","8","12","3"],2,"d/dx(x³) = 3x², and 3 × 2² = 12."],["∫ 2x dx =",["x² + C","2x² + C","x + C","2 + C"],0,"∫xⁿ dx = xⁿ⁺¹/(n+1), so ∫2x dx = x² + C."]]},
+{t:"Permutations and Combinations",s:"Maths",l:["11","JEE"],
+n:["n! = n(n−1)…1 and 0! = 1.","ⁿPᵣ = n!/(n−r)! when order matters. ⁿCᵣ = n!/(r!(n−r)!) when it does not.","ⁿCᵣ = ⁿCₙ₋ᵣ and ⁿCᵣ + ⁿCᵣ₋₁ = ⁿ⁺¹Cᵣ.","n objects in a circle: (n−1)! ways. n objects with repeats p, q, …: n!/(p! q! …)."],
+c:[["Value of 0!","1"],["Arrangements of the letters of SUCCESS","7! / (3! × 2!) = 420"],["Value of ⁵C₂","10"]],
+m:[["In how many ways can 4 people sit around a round table?",["24","6","12","4"],1,"Circular arrangements: (4 − 1)! = 6."],["⁶C₂ equals",["12","15","20","30"],1,"6! / (2! × 4!) = 15."]]},
+{t:"Chemical Bonding",s:"Chemistry",l:["11","NEET","JEE"],
+n:["Ionic bond: electrons are transferred (NaCl). Covalent bond: electrons are shared (H₂, CH₄). Coordinate bond: both shared electrons come from one atom.","Hybridisation: sp is linear (180°), sp² is trigonal planar (120°), sp³ is tetrahedral (109.5°).","VSEPR shapes: CH₄ tetrahedral (109.5°), NH₃ pyramidal (about 107°), H₂O bent (about 104.5°).","Bond order = (bonding electrons − antibonding electrons) / 2. A higher bond order means a shorter, stronger bond."],
+c:[["Shape of the NH₃ molecule?","Trigonal pyramidal, because nitrogen has one lone pair."],["Hybridisation of carbon in ethene (C₂H₄)?","sp²"],["Bond order of O₂ by molecular orbital theory?","2"]],
+m:[["Which molecule is linear?",["H₂O","CO₂","NH₃","CH₄"],1,"Carbon in CO₂ is sp hybridised with no lone pairs, so the angle is 180°."],["The bond angle in H₂O is about",["90°","104.5°","109.5°","120°"],1,"Two lone pairs on oxygen squeeze the angle below 109.5°."]]},
+{t:"Periodic Table and Periodicity",s:"Chemistry",l:["11","NEET","JEE"],
+n:["Modern periodic law: properties of elements are a periodic function of their atomic number.","Across a period, atomic radius decreases while ionisation enthalpy and electronegativity generally increase. Down a group, radius increases while both decrease.","Fluorine is the most electronegative element. Alkali metals have the largest atomic radii in their period.","Exceptions in first ionisation enthalpy: N is higher than O, and Be is higher than B."],
+c:[["Most electronegative element?","Fluorine (4.0 on the Pauling scale)."],["Which is larger, Na⁺ or F⁻?","F⁻. Both have 10 electrons, but Na⁺ has more protons pulling them in."],["Which block holds the transition elements?","The d-block."]],
+m:[["Which element has the highest first ionisation enthalpy?",["Li","Na","F","Ne"],3,"Neon has a complete octet and a high nuclear charge, so removing an electron takes the most energy."],["From Li to F across period 2, atomic radius",["increases","decreases","stays the same","rises then falls"],1,"Nuclear charge rises while electrons enter the same shell, pulling them in."]]},
+{t:"Thermodynamics",s:"Chemistry",l:["11","NEET","JEE"],
+n:["First law: ΔU = q + w. Enthalpy H = U + PV, and at constant pressure ΔH equals the heat exchanged.","Hess's law: the total enthalpy change is the same whichever path the reaction takes.","Spontaneity: ΔG = ΔH − TΔS. A process is spontaneous when ΔG is negative.","At equilibrium ΔG = 0, and ΔG° = −RT ln K."],
+c:[["Sign of ΔH for an exothermic reaction?","Negative."],["Gibbs energy equation?","ΔG = ΔH − TΔS"],["Entropy of a perfect crystal at 0 K?","Zero (third law)."]],
+m:[["A reaction has negative ΔH and positive ΔS. It is",["never spontaneous","spontaneous at all temperatures","spontaneous only at high T","spontaneous only at low T"],1,"ΔG = ΔH − TΔS is negative at every temperature."],["For a spontaneous process at constant T and P, ΔG is",["positive","zero","negative","infinite"],2,"Spontaneous processes lower the Gibbs energy."]]},
+{t:"Electrochemistry",s:"Chemistry",l:["12","NEET","JEE"],
+n:["Oxidation (loss of electrons) happens at the anode. Reduction (gain of electrons) happens at the cathode.","E°cell = E°cathode − E°anode. A positive E°cell means the reaction is spontaneous.","Nernst equation at 298 K: E = E° − (0.0591/n) log Q. Also ΔG° = −nFE°.","Faraday's first law: mass deposited m = ZIt. One faraday is about 96500 C per mole of electrons."],
+c:[["Value of 1 faraday?","About 96500 C per mole of electrons."],["Where does oxidation occur?","At the anode, in both galvanic and electrolytic cells."],["Relation between ΔG° and E°cell?","ΔG° = −nFE°cell"]],
+m:[["Charge needed to deposit 1 mol of copper from Cu²⁺ is",["96500 C","193000 C","289500 C","48250 C"],1,"Cu²⁺ + 2e⁻ → Cu needs 2 mol of electrons, so 2 × 96500 C."],["E°cathode = +0.34 V and E°anode = −0.76 V. E°cell is",["−1.10 V","+0.42 V","+1.10 V","−0.42 V"],2,"0.34 − (−0.76) = +1.10 V."]]},
+{t:"Organic Chemistry Basics",s:"Chemistry",l:["11","NEET","JEE"],
+n:["General formulas: alkanes CₙH₂ₙ₊₂, alkenes CₙH₂ₙ, alkynes CₙH₂ₙ₋₂. Stems: meth, eth, prop, but, pent, hex.","Suffixes: alcohol -ol, aldehyde -al, ketone -one, carboxylic acid -oic acid, amine -amine.","Carbocation stability: tertiary > secondary > primary > methyl, because of hyperconjugation and the +I effect.","Isomerism: structural (chain, position, functional group) and stereo (geometrical, optical)."],
+c:[["General formula of alkenes?","CₙH₂ₙ"],["IUPAC name of CH₃CH₂OH?","Ethanol."],["Which carbocation is the most stable?","Tertiary."]],
+m:[["The IUPAC name of CH₃COCH₃ is",["propanal","propanone","propan-1-ol","propanoic acid"],1,"A ketone with 3 carbons ends in -one: propanone."],["How many structural isomers does C₄H₁₀ have?",["1","2","3","4"],1,"Butane and 2-methylpropane (isobutane)."]]}
+];
+var L=["All","10","11","12","NEET","JEE"],S=["All","Physics","Chemistry","Maths","Biology"],lvl="All",sub="All",ci=0,fl=0,Q=null;
+function $(i){return document.getElementById(i)}
+function lab(x){return/^\d/.test(x)?"Class "+x:x}
+function sv(k,v){try{localStorage.setItem("sb_"+k,v)}catch(e){}}
+function ld(k){try{return localStorage.getItem("sb_"+k)}catch(e){return null}}
+function best(i){return +ld("b"+i)||0}
+function inLv(t){return(lvl=="All"||t.l.indexOf(lvl)>-1)&&(sub=="All"||t.s==sub)}
+function pool(){var a=[];T.forEach(function(t){if(inLv(t))a=a.concat(t.m)});return a}
+function startQ(id){var q=id=="all"?pool().sort(function(){return Math.random()-.5}).slice(0,10):T[id].m.slice();Q={id:id,qs:q,i:0,s:0,a:-1}}
+function home(){
+var h='<div class="lvs">'+L.map(function(x){return'<button class="lv'+(x==lvl?' on':'')+'" data-lv="'+x+'">'+lab(x)+'</button>'}).join("")+'</div><div class="lvs">'+S.map(function(x){return'<button class="lv'+(x==sub?' on':'')+'" data-sb="'+x+'">'+(x=="All"?"All subjects":x)+'</button>'}).join("")+'</div>';
+var n=pool().length;
+h+=n?'<button class="btn" data-go="q/all">Quick quiz, '+Math.min(n,10)+' questions</button>':'<p>No topics for this mix yet. Try another class or subject.</p>';
+T.forEach(function(t,i){if(!inLv(t))return;var b=best(i);h+='<div class="row" data-go="t/'+i+'/n"><span class="sc">'+(b?b+"%":"New")+'</span><b>'+t.t+'</b><small>'+t.s+", "+t.l.map(lab).join(", ")+'</small></div>'});
+return h}
+function quiz(){
+if(Q.i>=Q.qs.length){var p=Math.round(100*Q.s/Q.qs.length);if(Q.id!="all"&&p>best(Q.id))sv("b"+Q.id,p);
+return'<p class="big">'+Q.s+' of '+Q.qs.length+'</p><p>'+p+'% correct.</p><button class="btn" data-rs="1">Try again</button>'}
+var q=Q.qs[Q.i],h='<p class="qn">Question '+(Q.i+1)+' of '+Q.qs.length+'</p><p class="q">'+q[0]+'</p>';
+q[1].forEach(function(o,j){var c=Q.a<0?"":j==q[2]?" ok":j==Q.a?" no":"";h+='<button class="opt'+c+'" data-o="'+j+'"><span class="b">'+"ABCD".charAt(j)+'</span>'+o+'</button>'});
+if(Q.a>=0)h+='<p class="ex">'+q[3]+'</p><button class="btn" data-nq="1">'+(Q.i+1<Q.qs.length?"Next question":"See result")+'</button>';
+return h}
+function topic(i,tab){
+var t=T[i],h='<button class="bk" data-go="h">Back to topics</button><h2>'+t.t+'</h2><div class="lvs">';
+[["n","Notes"],["f","Cards"],["q","Quiz"]].forEach(function(x){h+='<button class="lv'+(x[0]==tab?' on':'')+'" data-tab="'+x[0]+'">'+x[1]+'</button>'});
+h+='</div>';
+if(tab=="n")h+='<ul class="nt">'+t.n.map(function(x){return'<li>'+x+'</li>'}).join("")+'</ul>';
+else if(tab=="f"){var c=t.c[ci];h+='<div class="fc" data-flip="1"><small>'+(fl?"Answer":"Question. Tap to flip.")+'</small>'+(fl?c[1]:c[0])+'</div><div class="nav"><button class="btn alt" data-nx="-1">Previous</button><span>'+(ci+1)+' of '+t.c.length+'</span><button class="btn alt" data-nx="1">Next</button></div>'}
+else h+=quiz();
+return h}
+function render(sc){
+var r=(location.hash||"#").slice(1).split("/"),a=$("app"),h;
+if(sc){ci=0;fl=0}
+if(r[0]=="t"&&T[+r[1]]){var i=+r[1],tab=r[2]||"n";if(tab=="q"&&(sc||!Q||Q.id!==i))startQ(i);h=topic(i,tab);a.className=tab=="q"?"":"ruled"}
+else if(r[0]=="q"){if(sc||!Q||Q.id!=="all")startQ("all");h='<button class="bk" data-go="h">Back to topics</button><h2>Quick quiz</h2>'+quiz();a.className=""}
+else{h=home();a.className="ruled"}
+a.innerHTML=h;if(sc)window.scrollTo(0,0)}
+document.addEventListener("click",function(e){
+var el=e.target.closest("[data-lv],[data-sb],[data-go],[data-tab],[data-flip],[data-nx],[data-o],[data-nq],[data-rs]");if(!el)return;
+var d=el.dataset,r=(location.hash||"#").slice(1).split("/");
+if(d.lv!==undefined){lvl=d.lv;render()}
+else if(d.sb!==undefined){sub=d.sb;render()}
+else if(d.go!==undefined)location.hash=d.go;
+else if(d.tab!==undefined)location.replace("#t/"+r[1]+"/"+d.tab);
+else if(d.flip!==undefined){fl=fl?0:1;render()}
+else if(d.nx!==undefined){var n=T[+r[1]].c.length;ci=(ci+Number(d.nx)+n)%n;fl=0;render()}
+else if(d.o!==undefined){if(Q.a<0){Q.a=+d.o;if(Q.a==Q.qs[Q.i][2])Q.s++}render()}
+else if(d.nq!==undefined){Q.i++;Q.a=-1;render()}
+else if(d.rs!==undefined){startQ(Q.id);render()}
+});
+window.addEventListener("hashchange",function(){render(1)});
+render(1);
+</script>
+</body>
+</html>
